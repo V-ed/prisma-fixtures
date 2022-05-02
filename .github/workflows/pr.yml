@@ -1,48 +1,40 @@
-name: PR Checks
-
+name: PR
 on:
   pull_request:
     branches-ignore:
-      - 'renovate/**'
+      - 'release-please**'
 
 jobs:
-  lint:
-    name: 'Lint'
+  coverage:
+    name: Coverage
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.5
-        with:
-          node-version: '14'
-
-      - name: Install
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Lint Tests
-        run: npm run lint:tests
-
-  build-and-test:
-    name: 'Build and Test - Node ${{ matrix.node }}'
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [12, 14, 15]
+    if: contains(fromJson('["ved-bot", "renovate[bot]"]'), github.actor) == false
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.5
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ env.NODE_VERSION }}
 
-      - name: Install
-        run: npm ci
+      - name: Retrieve pnpm modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: install-${{ env.NODE_VERSION }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            install-${{ env.NODE_VERSION }}-${{ runner.os }}-
 
-      - name: Build
-        run: npm run build
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: true
 
-      - name: Test
-        run: npm test
+      - name: Test and Coverage (PR)
+        uses: anuraag016/Jest-Coverage-Diff@master
+        with:
+          accessToken: '${{ secrets.GH_BOT_TOKEN }}'
+          runCommand: "pnpm run test -- --coverage --collectCoverage=true --coverageReporters='json-summary' --coverageDirectory='./'"
+          # delta: 0.5 # Delta of % changed that would make this job fail
+          afterSwitchCommand: 'pnpm i'

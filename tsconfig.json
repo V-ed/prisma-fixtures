@@ -1,53 +1,37 @@
 {
-    "compilerOptions": {
-      "target": "es2019",
-      "module": "commonjs",
-      "lib": [
-        "es2019"
-      ],
-      
-      "allowJs": true,
-      
-      "baseUrl": "./",
-      "paths": {
-        "$/*": ["./src/*"],
-      },
-      
-      "typeRoots": [
-        "@types",
-        "./node_modules/@types"
-      ],
-      
-      "outDir": "./dist",
-      "declaration": true,
-      "sourceMap": true,
-      "removeComments": false,
-      "incremental": true,
-      "skipLibCheck": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      
-      "strict": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "strictFunctionTypes": true,
-      "strictBindCallApply": true,
-      "strictPropertyInitialization": true,
-      "noImplicitThis": true,
-      "alwaysStrict": true,
-      "noImplicitOverride": true,
-      // "importsNotUsedAsValues": "error",
-      
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-    },
-    "include": [
-      "src/**/*.ts",
+  "extends": "@v-ed/tsconfig",
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES2020",
+    "lib": [
+      "ES6"
     ],
-    "exclude": [
-      "node_modules",
-      "src/**/*.spec.ts",
-      "src/**/*.d.ts",
-    ]
-  }
-  
+    
+    "moduleResolution": "node",
+    
+    "allowJs": true,
+    
+    "baseUrl": ".",
+    "paths": {
+      "$/*": ["./src/*"],
+    },
+    
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types"
+    ],
+    
+    "outDir": "./dist",
+    
+    "importHelpers": false,
+    "resolveJsonModule": false,
+  },
+  "include": [
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts",
+  ]
+}

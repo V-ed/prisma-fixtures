@@ -3,7 +3,11 @@
 		"editor.defaultFormatter": "vscode.json-language-features",
 		"editor.codeActionsOnSave": {
 			"source.fixAll": true
-		},
+		}
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -11,7 +15,7 @@
 		"editor.codeActionsOnSave": {
 			"source.organizeImports": true,
 			"source.fixAll.eslint": true
-		},
+		}
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -20,10 +24,35 @@
 			"source.fixAll.eslint": true
 		}
 	},
-	"[yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode",
 		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
 	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[graphql]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[prisma]": {
+		"editor.formatOnSave": true
+	},
+	"git.pullTags": false,
+	"json.schemas": [
+		{
+			"fileMatch": ["renovate.json"],
+			"url": "https://docs.renovatebot.com/renovate-schema.json"
+		}
+	],
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"jest.jestCommandLine": "npm test --",
+	"vitest.enable": true,
 }
