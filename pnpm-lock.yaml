@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': ^3.13.0
-  '@types/node': 16.11.33
+  '@types/node': 16.11.32
   '@v-ed/eslint-config': 0.1.0
   '@v-ed/prettier-config': 0.1.1
   '@v-ed/tsconfig': 0.1.2
@@ -19,7 +19,7 @@ dependencies:
   class-importer: 0.1.1
 
 devDependencies:
-  '@types/node': 16.11.33
+  '@types/node': 16.11.32
   '@v-ed/eslint-config': 0.1.0_t725usgvqspm5woeqpaxbfp2qu
   '@v-ed/prettier-config': 0.1.1
   '@v-ed/tsconfig': 0.1.2
@@ -153,8 +153,8 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
-  /@types/node/16.11.33:
-    resolution: {integrity: sha512-0PJ0vg+JyU0MIan58IOIFRtSvsb7Ri+7Wltx2qAg94eMOrpg4+uuP3aUHCpxXc1i0jCXiC+zIamSZh3l9AbcQA==}
+  /@types/node/16.11.32:
+    resolution: {integrity: sha512-+fnfNvG5JQdC1uGZiTx+0QVtoOHcggy6+epx65JYroPGsE1uhp+vo5kioiGKsAkor6ocwHteU2EvO7N8vtOZtA==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.22.0_lnjlwhtxjffjmj5o7dnwvwyqxq:
