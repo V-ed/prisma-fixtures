@@ -139,9 +139,9 @@ jobs:
           run_install: true
 
       - name: Test
-        run: pnpm run test -- --coverage
+        run: pnpm run test --coverage
 
       - name: Coveralls
-        run: cat ./coverage/lcov.info | pnpm dlx coveralls
+        run: cat ./coverage/lcov.info | pnpx coveralls
         env:
           COVERALLS_REPO_TOKEN: '${{ secrets.COVERALLS_REPO_TOKEN }}'
