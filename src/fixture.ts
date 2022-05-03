@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClientLike } from './@types/prisma';
 
 // Utility types
 export type IdentityModel = { id: number };
@@ -34,5 +34,5 @@ export enum LinkMode {
 export abstract class Fixture<T extends IdentityModel = IdentityModel> {
 	abstract readonly dependencies: Dependency[];
 
-	abstract seed(prisma: PrismaClient, link: LinkMethod<this>): Promise<T[]>;
+	abstract seed(prisma: PrismaClientLike, link: LinkMethod<this>): Promise<T[]>;
 }
