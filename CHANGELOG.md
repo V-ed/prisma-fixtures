@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.3](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.2...prisma-fixtures-v0.1.3) (2022-05-03)
+
+
+### Bug Fixes
+
+* add prisma types to generated dist ([f021642](https://github.com/V-ed/prisma-fixtures/commit/f021642c03644130cf1de7fb5aaf8880e8665a2c))
+
 ### [0.1.2](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.1...prisma-fixtures-v0.1.2) (2022-05-03)
 
 
