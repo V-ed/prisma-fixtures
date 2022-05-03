@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.4](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.3...prisma-fixtures-v0.1.4) (2022-05-03)
+
+
+### Bug Fixes
+
+* allow both esm and commonjs usage ([d401bc6](https://github.com/V-ed/prisma-fixtures/commit/d401bc64f164bc7938b76754fc81ed6b240d2580))
+
 ### [0.1.3](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.2...prisma-fixtures-v0.1.3) (2022-05-03)
 
 
