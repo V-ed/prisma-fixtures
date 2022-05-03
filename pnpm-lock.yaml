@@ -7,7 +7,7 @@ specifiers:
   '@v-ed/prettier-config': 0.1.1
   '@v-ed/tsconfig': 0.1.2
   c8: 7.11.2
-  class-importer: ^0.1.1
+  class-importer: ^0.1.2
   eslint: 8.14.0
   npm-run-all: 4.1.5
   typescript: 4.6.4
@@ -16,7 +16,7 @@ specifiers:
 
 dependencies:
   '@prisma/client': 3.13.0
-  class-importer: 0.1.1
+  class-importer: 0.1.2
 
 devDependencies:
   '@types/node': 16.11.33
@@ -485,8 +485,8 @@ packages:
     resolution: {integrity: sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=}
     dev: true
 
-  /class-importer/0.1.1:
-    resolution: {integrity: sha512-uegqkbRJcTKdTlUGKGv0hFN9JwTHCVBaCr8J4Xy7aqhM9hCZZjwESJUmGjC84T0u/GoK47GLkrp2BUfN8sBlOw==}
+  /class-importer/0.1.2:
+    resolution: {integrity: sha512-fYXqtUjlFMATeZdXYd05Ehr814ZFFPMR687RTr6lWSQeqQ0yfSw2VWjbjzz3C+chrBQzny91HphOXiA931Q6Kg==}
     dependencies:
       dependency-graph: 0.11.0
       recursive-readdir: 2.2.2
