@@ -39,8 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "16.11.33",
-    "@typescript-eslint/eslint-plugin": "5.19.0",
-    "@v-ed/eslint-config": "0.1.0",
+    "@v-ed/eslint-config": "0.1.1",
     "@v-ed/prettier-config": "0.1.1",
     "@v-ed/tsconfig": "0.1.2",
     "c8": "7.11.2",
