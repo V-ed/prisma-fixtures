@@ -3,7 +3,7 @@ import { DepGraph } from 'dependency-graph';
 import { PrismaClientLike } from './@types/prisma';
 import { Fixture, IdentityModel, LinkMethod, LinkMode } from './fixture';
 
-export type ImportFixtureOptions<PrismaClient extends PrismaClientLike> = {
+export type ImportFixtureOptions<PrismaClient extends PrismaClientLike = PrismaClientLike> = {
 	/** The prisma client on which to import the fixtures in. Uses the default prisma client if undefined. */
 	prisma: PrismaClient;
 	/**
@@ -17,7 +17,7 @@ export type ImportFixtureOptions<PrismaClient extends PrismaClientLike> = {
 	doCloseDatabase: boolean;
 };
 
-async function getSpecs<PrismaClient extends PrismaClientLike>(
+async function getSpecs<PrismaClient extends PrismaClientLike = PrismaClientLike>(
 	options?: Partial<ImportFixtureOptions<PrismaClient>>,
 ): Promise<ImportFixtureOptions<PrismaClient>> {
 	const getPrisma = async () => {
@@ -89,7 +89,9 @@ function createLinkFn(fixture: Fixture, depsData: DependenciesData): LinkMethod<
  * @returns Promise containing the results of the seeds, tagged by their (class) name and their created models.
  * If an error occurred while seeding, the resulting promise will short-circuit to throw said error, respecting the given options.
  */
-export async function importFixtures<PrismaClient extends PrismaClientLike>(options?: Partial<ImportFixtureOptions<PrismaClient>>) {
+export async function importFixtures<PrismaClient extends PrismaClientLike = PrismaClientLike>(
+	options?: Partial<ImportFixtureOptions<PrismaClient>>,
+) {
 	const specs = await getSpecs(options);
 
 	const fixtureContainer = importClasses(Fixture, specs.fixturesPath);
