@@ -2,10 +2,20 @@
   "name": "prisma-fixtures",
   "version": "0.1.3",
   "description": "Prisma fixture loading paradigm",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
+  "main": "dist/commonjs/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/commonjs/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "npm-run-all -p build:*",
+    "build:esm": "tsc",
+    "build:commonjs": "tsc -p tsconfig.commonjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
     "lint": "npm-run-all lint:*",
     "lint:src": "eslint \"src/**/*.ts\"",
     "lint:tests": "eslint \"tests/**/*.ts\"",

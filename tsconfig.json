@@ -21,10 +21,11 @@
       "./node_modules/@types"
     ],
     
-    "outDir": "./dist",
+    "outDir": "./dist/esm",
     
     "importHelpers": false,
     "resolveJsonModule": false,
+    "declaration": false
   },
   "include": [
     "src/**/*.ts",
