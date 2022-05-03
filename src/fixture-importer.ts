@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { importClasses } from 'class-importer';
 import { DepGraph } from 'dependency-graph';
+import { PrismaClientLike } from './@types/prisma';
 import { Fixture, IdentityModel, LinkMethod, LinkMode } from './fixture';
 
-export type ImportFixtureOptions = {
+export type ImportFixtureOptions<PrismaClient extends PrismaClientLike> = {
 	/** The prisma client on which to import the fixtures in. Uses the default prisma client if undefined. */
 	prisma: PrismaClient;
 	/**
@@ -17,9 +17,23 @@ export type ImportFixtureOptions = {
 	doCloseDatabase: boolean;
 };
 
-function getSpecs(options?: Partial<ImportFixtureOptions>): ImportFixtureOptions {
+async function getSpecs<PrismaClient extends PrismaClientLike>(
+	options?: Partial<ImportFixtureOptions<PrismaClient>>,
+): Promise<ImportFixtureOptions<PrismaClient>> {
+	const getPrisma = async () => {
+		if (options?.prisma) {
+			return options.prisma;
+		}
+
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
+		const { PrismaClient } = await import('@prisma/client');
+
+		return new PrismaClient();
+	};
+
 	return {
-		prisma: options?.prisma ?? new PrismaClient(),
+		prisma: await getPrisma(),
 		fixturesPath: options?.fixturesPath ?? './prisma/fixtures',
 		doCloseDatabase: options?.doCloseDatabase ?? true,
 	};
@@ -75,8 +89,8 @@ function createLinkFn(fixture: Fixture, depsData: DependenciesData): LinkMethod<
  * @returns Promise containing the results of the seeds, tagged by their (class) name and their created models.
  * If an error occurred while seeding, the resulting promise will short-circuit to throw said error, respecting the given options.
  */
-export async function importFixtures(options?: Partial<ImportFixtureOptions>) {
-	const specs = getSpecs(options);
+export async function importFixtures<PrismaClient extends PrismaClientLike>(options?: Partial<ImportFixtureOptions<PrismaClient>>) {
+	const specs = await getSpecs(options);
 
 	const fixtureContainer = importClasses(Fixture, specs.fixturesPath);
 

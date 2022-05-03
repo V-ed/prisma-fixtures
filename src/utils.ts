@@ -1,16 +1,5 @@
+import { PrismaCreator, PrismaModel, PrismaUpsertor } from './@types/prisma';
 import { Range } from './fixture';
-
-type PrismaCreateDataArgType = { data: any };
-type PrismaUpsertDataArgType = {
-	create: any;
-	update: any;
-	where: any;
-};
-
-type PrismaFnReturnType = PromiseLike<any>;
-
-type PrismaCreator = (args: PrismaCreateDataArgType) => PrismaFnReturnType;
-type PrismaUpsertor = (args: PrismaUpsertDataArgType) => PrismaFnReturnType;
 
 type InferredGeneric<R> = R extends PromiseLike<infer T> ? T : never;
 
@@ -20,19 +9,23 @@ type DataCreatorSpecifierMapped<F extends PrismaCreator> = (current: number) => 
 type DataUpsertorSpecifier<F extends PrismaUpsertor> = Parameters<F>[0];
 type DataUpsertorSpecifierMapped<F extends PrismaUpsertor> = (current: number) => DataUpsertorSpecifier<F>;
 
-type AutoRange = {
-	fromArray: any[];
+type AutoRange<T extends PrismaModel = PrismaModel> = {
+	fromArray: T[];
 	count: number;
 	includeArray?: boolean;
 };
 
-type PossibleRange = number | Range | AutoRange;
+type PossibleRange<T extends PrismaModel = PrismaModel> = number | Range | AutoRange<T>;
 
-function isVarRange(o: any): o is Range {
-	return o.from != undefined;
+function isVarRange(o: unknown): o is Range {
+	if (!o || typeof o != 'object') {
+		return false;
+	}
+
+	return 'from' in o && 'to' in o;
 }
 
-function getRangeData<T = any>(range: PossibleRange): { count: number; delta: number; models?: T[] } {
+function getRangeData<T extends PrismaModel = PrismaModel>(range: PossibleRange<T>): { count: number; delta: number; models?: T[] } {
 	if (typeof range == 'number') {
 		return { count: range, delta: 1 };
 	}
