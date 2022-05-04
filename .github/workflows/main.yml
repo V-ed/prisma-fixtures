@@ -36,17 +36,17 @@ jobs:
         if: steps.skip_check.outputs.should_skip != 'true'
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
+          path: ~/.local/share/pnpm/store
           key: install-${{ env.NODE_VERSION }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            install-${{ env.NODE_VERSION }}-${{ runner.os }}-
 
       - name: Install packages
         if: steps.skip_check.outputs.should_skip != 'true' && steps.cache-modules.outputs.cache-hit != 'true'
         uses: pnpm/action-setup@v2
         with:
           version: ${{ env.PNPM_VERSION }}
-          run_install: true
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --ignore-scripts]
 
   lint:
     name: Lint
@@ -64,7 +64,7 @@ jobs:
       - name: Retrieve pnpm modules
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
+          path: ~/.local/share/pnpm/store
           key: install-${{ env.NODE_VERSION }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             install-${{ env.NODE_VERSION }}-${{ runner.os }}-
@@ -97,7 +97,7 @@ jobs:
       - name: Retrieve pnpm modules
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
+          path: ~/.local/share/pnpm/store
           key: install-${{ env.NODE_VERSION }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             install-${{ env.NODE_VERSION }}-${{ runner.os }}-
@@ -127,7 +127,7 @@ jobs:
       - name: Retrieve pnpm modules
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
+          path: ~/.local/share/pnpm/store
           key: install-${{ env.NODE_VERSION }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             install-${{ env.NODE_VERSION }}-${{ runner.os }}-
