@@ -4,6 +4,10 @@ on:
     branches-ignore:
       - 'release-please**'
 
+env:
+  NODE_VERSION: '16'
+  PNPM_VERSION: 7
+
 jobs:
   coverage:
     name: Coverage
@@ -35,6 +39,6 @@ jobs:
         uses: anuraag016/Jest-Coverage-Diff@master
         with:
           accessToken: '${{ secrets.GH_BOT_TOKEN }}'
-          runCommand: "pnpm run test -- --coverage --collectCoverage=true --coverageReporters='json-summary' --coverageDirectory='./'"
+          runCommand: "pnpm run test --coverage --collectCoverage=true --coverageReporters='json-summary' --coverageDirectory='./'"
           # delta: 0.5 # Delta of % changed that would make this job fail
           afterSwitchCommand: 'pnpm i'
