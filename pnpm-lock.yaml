@@ -5,7 +5,7 @@ specifiers:
   '@types/node': 16.11.33
   '@v-ed/eslint-config': 0.1.1
   '@v-ed/prettier-config': 0.1.1
-  '@v-ed/tsconfig': 0.1.2
+  '@v-ed/tsconfig': 0.2.0
   c8: 7.11.2
   class-importer: ^0.1.2
   eslint: 8.14.0
@@ -22,7 +22,7 @@ devDependencies:
   '@types/node': 16.11.33
   '@v-ed/eslint-config': 0.1.1_t725usgvqspm5woeqpaxbfp2qu
   '@v-ed/prettier-config': 0.1.1
-  '@v-ed/tsconfig': 0.1.2
+  '@v-ed/tsconfig': 0.2.0
   c8: 7.11.2
   eslint: 8.14.0
   npm-run-all: 4.1.5
@@ -344,8 +344,8 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@v-ed/tsconfig/0.1.2:
-    resolution: {integrity: sha512-gaMDdYElJXLOMfyEGXo4zL7RJyAVHgAoSAS49NS8LeJtPc0gYOPE/KCY+89yrh9CYxe0TE9bVus11IFYwyyZXw==}
+  /@v-ed/tsconfig/0.2.0:
+    resolution: {integrity: sha512-SkfkjDM8sWD3QOtQ8EcGI/gBtnQfoptjyWZZGpnM1oXSjRABgTodN2lxuOrXhWUnyVpNG05w+yw3uOc1yvwhwA==}
     engines: {node: '>=14'}
     dev: true
 
