@@ -1,6 +1,6 @@
 {
   "name": "prisma-fixtures",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Prisma fixture loading paradigm",
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
