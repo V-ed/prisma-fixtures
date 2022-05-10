@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.9](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.8...prisma-fixtures-v0.1.9) (2022-05-10)
+
+
+### Bug Fixes
+
+* build commonjs module ([0f6bcac](https://github.com/V-ed/prisma-fixtures/commit/0f6bcac1b71e54634c898e72d326d6b735ca3e70))
+
 ### [0.1.8](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.7...prisma-fixtures-v0.1.8) (2022-05-10)
 
 
