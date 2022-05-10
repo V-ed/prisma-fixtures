@@ -1,5 +1,5 @@
-import { PrismaCreator, PrismaModel, PrismaUpsertor } from './@types/prisma';
-import { Range } from './fixture';
+import type { PrismaCreator, PrismaModel, PrismaUpsertor } from './@types/prisma';
+import type { Range } from './fixture';
 
 type InferredGeneric<R> = R extends PromiseLike<infer T> ? T : never;
 

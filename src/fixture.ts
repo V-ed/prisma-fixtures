@@ -1,4 +1,4 @@
-import { PrismaClientLike } from './@types/prisma';
+import type { PrismaClientLike } from './@types/prisma';
 
 // Utility types
 export type IdentityModel = { id: number };

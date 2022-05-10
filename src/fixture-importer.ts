@@ -1,6 +1,6 @@
 import { importClasses } from 'class-importer';
 import { DepGraph } from 'dependency-graph';
-import { PrismaClientLike } from './@types/prisma';
+import type { PrismaClientLike } from './@types/prisma';
 import { Fixture, IdentityModel, LinkMethod, LinkMode } from './fixture';
 
 export type ImportFixtureOptions<PrismaClient extends PrismaClientLike = PrismaClientLike> = {
@@ -42,7 +42,7 @@ async function getSpecs<PrismaClient extends PrismaClientLike = PrismaClientLike
 type DependenciesData = Record<string, IdentityModel[]>;
 
 function createLinkFn(fixture: Fixture, depsData: DependenciesData): LinkMethod<Fixture> {
-	return (dependency: typeof fixture['dependencies'][number], option) => {
+	return (dependency: typeof fixture['dependencies'][number], option): IdentityModel => {
 		const data: IdentityModel[] | undefined = depsData[dependency.name];
 
 		if (!data?.length) {
@@ -57,11 +57,11 @@ function createLinkFn(fixture: Fixture, depsData: DependenciesData): LinkMethod<
 				throw `Trying to link to a model that is out of the bounds of the given fixture! Max allowed : '${data.length}', given : '${option}'`;
 			}
 
-			return data[option];
+			return data[option]!;
 		} else if (typeof option == 'string') {
 			switch (option) {
 				case LinkMode.RANDOM:
-					return data[Math.floor(Math.random() * data.length)];
+					return data[Math.floor(Math.random() * data.length)]!;
 				default:
 					throw 'Library error!';
 			}
@@ -78,7 +78,7 @@ function createLinkFn(fixture: Fixture, depsData: DependenciesData): LinkMethod<
 				throw `The 'from' option must be less or equal to the 'to' option! From : '${from}', To : '${to}'`;
 			}
 
-			return data[from + Math.floor(Math.random() * (to - from))];
+			return data[from + Math.floor(Math.random() * (to - from))]!;
 		}
 	};
 }

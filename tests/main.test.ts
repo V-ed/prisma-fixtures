@@ -11,7 +11,7 @@ describe('Checking exported functions', () => {
 		expect(Array.isArray(fixtures)).toBe(true);
 		expect(fixtures.length).toBe(2);
 
-		expect(fixtures[0].name).toBe('UserFixture');
-		expect(fixtures[1].name).toBe('PostFixture');
+		expect(fixtures[0]!.name).toBe('UserFixture');
+		expect(fixtures[1]!.name).toBe('PostFixture');
 	});
 });
