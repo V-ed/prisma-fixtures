@@ -7,17 +7,16 @@ specifiers:
   '@v-ed/prettier-config': 0.1.1
   '@v-ed/tsconfig': 0.2.0
   c8: 7.11.2
-  class-importer: ^0.1.5
+  class-importer: ^0.1.6
   eslint: 8.15.0
   npm-run-all: 4.1.5
-  tslib: 2.4.0
   typescript: 4.6.4
   vite-tsconfig-paths: 3.4.1
   vitest: 0.12.3
 
 dependencies:
   '@prisma/client': 3.13.0
-  class-importer: 0.1.5
+  class-importer: 0.1.6
 
 devDependencies:
   '@types/node': 16.11.33
@@ -27,7 +26,6 @@ devDependencies:
   c8: 7.11.2
   eslint: 8.15.0
   npm-run-all: 4.1.5
-  tslib: 2.4.0
   typescript: 4.6.4
   vite-tsconfig-paths: 3.4.1
   vitest: 0.12.3_c8@7.11.2
@@ -487,8 +485,8 @@ packages:
     resolution: {integrity: sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=}
     dev: true
 
-  /class-importer/0.1.5:
-    resolution: {integrity: sha512-xbS8sz1pMWZ/EdfzUg6qnvaCUiBM1P4HQydwRLnL7wbint/EOZJxo5LE8l4TT150WKhVjJLjuPQ4XEL4ssmGgA==}
+  /class-importer/0.1.6:
+    resolution: {integrity: sha512-9e0aJHfHJNK7sokysMMe9qwkluoqJoUAc6snuEC+yeTLQTeAjPbfsIGh0T8ldXwFwfyhbOhk/5488D3VKMnhRA==}
     dependencies:
       dependency-graph: 0.11.0
       recursive-readdir: 2.2.2
@@ -1959,10 +1957,6 @@ packages:
 
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
-
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
   /tsutils/3.21.0_typescript@4.6.4:
