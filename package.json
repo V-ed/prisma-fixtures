@@ -3,6 +3,7 @@
   "version": "0.1.9",
   "description": "Prisma fixture loading paradigm",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@prisma/client": "^3.13.0",
     "@types/node": "16.11.33",
     "@v-ed/eslint-config": "0.1.1",
     "@v-ed/prettier-config": "0.1.1",
@@ -50,7 +52,6 @@
     "vitest": "0.12.3"
   },
   "dependencies": {
-    "@prisma/client": "^3.13.0",
-    "class-importer": "^0.1.6"
+    "class-importer": "^0.1.7"
   }
 }
