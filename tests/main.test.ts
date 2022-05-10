@@ -1,5 +1,5 @@
-import { importFixtures } from '$/fixture-importer';
 import { describe, expect, it } from 'vitest';
+import { importFixtures } from '../src/fixture-importer';
 import { MockConnection } from './data/good/MockConnection';
 
 describe('Checking exported functions', () => {
