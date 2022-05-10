@@ -1,20 +1,15 @@
 {
   "extends": "@v-ed/tsconfig",
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "module": "ES2020",
     "lib": [
-      "ES6"
+      "ES2020"
     ],
     
     "moduleResolution": "node",
     
     "allowJs": true,
-    
-    "baseUrl": ".",
-    "paths": {
-      "$/*": ["./src/*"],
-    },
     
     "typeRoots": [
       "@types",
@@ -22,10 +17,6 @@
     ],
     
     "outDir": "./dist",
-    
-    "importHelpers": false,
-    "resolveJsonModule": false,
-    "declaration": false,
   },
   "include": [
     "src/**/*.ts",
