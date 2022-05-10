@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.8](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.7...prisma-fixtures-v0.1.8) (2022-05-10)
+
+
+### Bug Fixes
+
+* remove esbuild for node only file system library ([a06d3bb](https://github.com/V-ed/prisma-fixtures/commit/a06d3bb2403755efc94909eda163edc956f92240))
+
 ### [0.1.7](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.6...prisma-fixtures-v0.1.7) (2022-05-10)
 
 
