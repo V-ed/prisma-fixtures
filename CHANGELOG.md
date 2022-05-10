@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.7](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.6...prisma-fixtures-v0.1.7) (2022-05-10)
+
+
+### Dependencies
+
+* update min version of class-importer to 0.1.4 ([1030977](https://github.com/V-ed/prisma-fixtures/commit/1030977c07fc2f6b47fec1d0ef97787aa6221e2f))
+
 ### [0.1.6](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.5...prisma-fixtures-v0.1.6) (2022-05-10)
 
 
