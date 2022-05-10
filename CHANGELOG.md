@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.10](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.9...prisma-fixtures-v0.1.10) (2022-05-10)
+
+
+### Bug Fixes
+
+* build esm module instead of commonjs ([235dd85](https://github.com/V-ed/prisma-fixtures/commit/235dd85ee37fd25a9a793cea70c542911a8821cc))
+
 ### [0.1.9](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.8...prisma-fixtures-v0.1.9) (2022-05-10)
 
 
