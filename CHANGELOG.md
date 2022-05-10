@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.6](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.5...prisma-fixtures-v0.1.6) (2022-05-10)
+
+
+### Bug Fixes
+
+* **build:** move to esbuild and tweak using latest changes ([2060195](https://github.com/V-ed/prisma-fixtures/commit/2060195a7193166cd300dc463e456f986d0ec248))
+
 ### [0.1.5](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.4...prisma-fixtures-v0.1.5) (2022-05-03)
 
 
