@@ -48,7 +48,7 @@ function getRangeData<T extends PrismaModel = PrismaModel>(range: PossibleRange<
 	}
 }
 
-async function serialPromises<T>(promises: (() => PromiseLike<T>)[]) {
+export async function serialPromises<T>(promises: (() => PromiseLike<T>)[]) {
 	const results = await promises.reduce(
 		(p, task) => p.then(async (prevResults = []) => [...prevResults, await task()]),
 		Promise.resolve() as unknown as Promise<T[]>,

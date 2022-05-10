@@ -2,6 +2,7 @@ import { importClasses } from 'class-importer';
 import { DepGraph } from 'dependency-graph';
 import type { PrismaClientLike } from './@types/prisma';
 import { Fixture, IdentityModel, LinkMethod, LinkMode } from './fixture';
+import { serialPromises } from './utils';
 
 export type ImportFixtureOptions<PrismaClient extends PrismaClientLike = PrismaClientLike> = {
 	/** The prisma client on which to import the fixtures in. Uses the default prisma client if undefined. */
@@ -115,7 +116,7 @@ export async function importFixtures<PrismaClient extends PrismaClientLike = Pri
 	const dependenciesData: DependenciesData = {};
 
 	try {
-		const result = await order
+		const fixturePromises = order
 			.map((fixtureName) => {
 				return {
 					name: fixtureName,
@@ -135,16 +136,9 @@ export async function importFixtures<PrismaClient extends PrismaClientLike = Pri
 						models,
 					};
 				};
-			})
-			.reduce(
-				(p, task) => p.then(async (prevResults = []) => [...prevResults, await task()]),
-				Promise.resolve() as unknown as Promise<
-					{
-						name: string;
-						models: IdentityModel[];
-					}[]
-				>,
-			);
+			});
+
+		const result = await serialPromises(fixturePromises);
 
 		if (specs.doCloseDatabase) {
 			await specs.prisma.$disconnect();
