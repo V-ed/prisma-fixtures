@@ -19,6 +19,7 @@
     "outDir": "./dist",
     
     "importHelpers": false,
+    "incremental": false,
   },
   "include": [
     "src/**/*.ts",
