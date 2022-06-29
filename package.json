@@ -1,6 +1,6 @@
 {
   "name": "prisma-fixtures",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Prisma fixture loading paradigm",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
