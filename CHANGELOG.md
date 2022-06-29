@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.11](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.10...prisma-fixtures-v0.1.11) (2022-06-29)
+
+
+### Bug Fixes
+
+* update deps to use working versions and fix vitest not working ([f556e31](https://github.com/V-ed/prisma-fixtures/commit/f556e31987ec20c9f60a9771626fbd2fdfbb8939))
+
+
+### Reverts
+
+* fix: build esm module instead of commonjs ([4d8fa60](https://github.com/V-ed/prisma-fixtures/commit/4d8fa60f6c5810229a9cb45f366a68d77aefdc04))
+
 ### [0.1.10](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.9...prisma-fixtures-v0.1.10) (2022-05-10)
 
 
