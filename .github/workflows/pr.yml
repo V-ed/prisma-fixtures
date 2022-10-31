@@ -44,3 +44,4 @@ jobs:
           afterSwitchCommand: 'pnpm i'
         env:
           COV_REPORTER: 'json-summary'
+          COV_DIRECTORY: './'
