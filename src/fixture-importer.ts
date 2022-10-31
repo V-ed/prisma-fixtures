@@ -26,11 +26,17 @@ async function getSpecs<PrismaClient extends PrismaClientLike = PrismaClientLike
 			return options.prisma;
 		}
 
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		const { PrismaClient } = await import('@prisma/client');
+		try {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
+			const { PrismaClient } = await import('@prisma/client');
 
-		return new PrismaClient();
+			return new PrismaClient();
+		} catch (error) {
+			throw new Error(
+				`Failed to retrieve the prisma client required. The PrismaClient was not provided in options, and you do not have @prisma/client installed or you didn't run the generate command.`,
+			);
+		}
 	};
 
 	return {
