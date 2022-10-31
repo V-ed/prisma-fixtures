@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.11...prisma-fixtures-v0.1.12) (2022-10-31)
+
+
+### Dependencies
+
+* update all updateable deps ([af3d437](https://github.com/V-ed/prisma-fixtures/commit/af3d437c0fc423b0f332b7316ecd67753a2fd4b5))
+
 ## [0.1.11](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.10...prisma-fixtures-v0.1.11) (2022-06-29)
 
 
