@@ -14,7 +14,7 @@ specifiers:
   npm-run-all: 4.1.5
   tsup: 6.5.0
   typescript: 4.9.4
-  vite-tsconfig-paths: 4.0.3
+  vite-tsconfig-paths: 4.0.5
   vitest: 0.26.3
 
 dependencies:
@@ -35,7 +35,7 @@ devDependencies:
   npm-run-all: 4.1.5
   tsup: 6.5.0_typescript@4.9.4
   typescript: 4.9.4
-  vite-tsconfig-paths: 4.0.3_gl4qsmwzp7wy5uclz4tx77gbli
+  vite-tsconfig-paths: 4.0.5_typescript@4.9.4
   vitest: 0.26.3
 
 packages:
@@ -2728,15 +2728,12 @@ packages:
       - terser
     dev: true
 
-  /vite-tsconfig-paths/4.0.3_gl4qsmwzp7wy5uclz4tx77gbli:
-    resolution: {integrity: sha512-gRO2Q/tOkV+9kMht5tz90+IaEKvW2zCnvwJV3tp2ruPNZOTM5rF+yXorJT4ggmAMYEaJ3nyXjx5P5jY5FwiZ+A==}
-    peerDependencies:
-      vite: '>2.0.0-0'
+  /vite-tsconfig-paths/4.0.5_typescript@4.9.4:
+    resolution: {integrity: sha512-/L/eHwySFYjwxoYt1WRJniuK/jPv+WGwgRGBYx3leciR5wBeqntQpUE6Js6+TJemChc+ter7fDBKieyEWDx4yQ==}
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.0.2_typescript@4.9.4
-      vite: 4.0.4_@types+node@16.18.3
     transitivePeerDependencies:
       - supports-color
       - typescript
