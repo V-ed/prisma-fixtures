@@ -1,14 +1,14 @@
 import VitePluginTsConfigPaths from 'vite-tsconfig-paths';
-import { defineConfig, UserConfig } from 'vitest/config';
+import type { CoverageC8Options } from 'vitest';
+import { defineConfig } from 'vitest/config';
 
-type CoverageReporter = NonNullable<NonNullable<UserConfig['test']>['coverage']>['reporter'];
+type CoverageReporter = CoverageC8Options['reporter'];
 
-const coverageReporter: NonNullable<CoverageReporter> = (process.env.COV_REPORTER as CoverageReporter) ?? 'lcov';
+const coverageReporter = (process.env.COV_REPORTER ?? 'lcov') as NonNullable<CoverageReporter>;
 const coverageDirectory: string = process.env.COV_DIRECTORY ?? `./coverage`;
 
 const vitestBaseConfig = defineConfig({
 	plugins: [VitePluginTsConfigPaths({ loose: true })],
-	// @ts-ignore
 	ssr: {
 		noExternal: ['class-importer'],
 	},
