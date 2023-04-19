@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.13](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.12...prisma-fixtures-v0.1.13) (2023-04-19)
+
+
+### Bug Fixes
+
+* do not specify package.exports ([a15d522](https://github.com/V-ed/prisma-fixtures/commit/a15d5225ed89440d872657bd0d1ff89e83a5217a))
+
 ## [0.1.12](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.11...prisma-fixtures-v0.1.12) (2023-04-19)
 
 
