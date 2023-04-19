@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   class-importer:
-    specifier: ^0.2.5
-    version: 0.2.5
+    specifier: ^0.2.6
+    version: 0.2.6
   dependency-graph:
     specifier: ^0.11.0
     version: 0.11.0
@@ -812,8 +812,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /class-importer@0.2.5:
-    resolution: {integrity: sha512-ONsothro04MrdRpNAbCYe4RKBHpF2X5w/kphkvF0F/4Vf8Bweh3I3XdxE1tahGf8i2r1yBePLxVP6EX4kpOYvg==}
+  /class-importer@0.2.6:
+    resolution: {integrity: sha512-8P4p/nsc04XhWWB7mDxTSFUSbtPybwydhTXZcyZiIqLZtBxcI4sK4JKybK8+3Uk3LBHXNzYCZsnII6t/AR593Q==}
     dependencies:
       recursive-readdir: 2.2.3
     dev: false
