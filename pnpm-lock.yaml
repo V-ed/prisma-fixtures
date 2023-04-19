@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   class-importer:
-    specifier: ^0.2.4
-    version: 0.2.4
+    specifier: ^0.2.5
+    version: 0.2.5
   dependency-graph:
     specifier: ^0.11.0
     version: 0.11.0
@@ -812,8 +812,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /class-importer@0.2.4:
-    resolution: {integrity: sha512-rnHSzUVJ/ti3Ophde0DlpaCZ2/7p2QMOgKVDVD0aUCoO6my0Zl66M0PVdLPFPbaf1N8kNMERfcM7WDq9EVTK9Q==}
+  /class-importer@0.2.5:
+    resolution: {integrity: sha512-ONsothro04MrdRpNAbCYe4RKBHpF2X5w/kphkvF0F/4Vf8Bweh3I3XdxE1tahGf8i2r1yBePLxVP6EX4kpOYvg==}
     dependencies:
       recursive-readdir: 2.2.3
     dev: false
@@ -853,7 +853,7 @@ packages:
     dev: true
 
   /concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
 
   /concordance@5.0.4:
     resolution: {integrity: sha512-OAcsnTEYu1ARJqWVGwf4zh4JDfHZEaSNlNccFmt8YjB2l/n19/PF2viLINHc57vO4FKIAFl2FWASIGZZWZ2Kxw==}
