@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.11...prisma-fixtures-v0.1.12) (2023-04-19)
+
+
+### Bug Fixes
+
+* build cjs code and update class-importer ^0.2.4 ([e513104](https://github.com/V-ed/prisma-fixtures/commit/e5131048ed60e11e603bced00af9dd29ef5e2bcf))
+
 ## [0.1.11](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.10...prisma-fixtures-v0.1.11) (2022-06-29)
 
 
