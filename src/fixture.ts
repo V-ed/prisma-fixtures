@@ -1,7 +1,8 @@
 import type { PrismaClientLike } from './@types/prisma';
 
 // Utility types
-export type IdentityModel = { id: number };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type IdentityModel = { id: any };
 
 export type ModelDependency<T extends IdentityModel> = { new (): Fixture<T> };
 
