@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.15](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.14...prisma-fixtures-v0.1.15) (2023-06-22)
+
+
+### Bug Fixes
+
+* make IdentityModel `id` property any ([4aa9dcb](https://github.com/V-ed/prisma-fixtures/commit/4aa9dcb35f3f2f667b6719456ac82ebe8046d3f2))
+
+
+### Dependencies
+
+* update deps, fixing vitest ([f0939a8](https://github.com/V-ed/prisma-fixtures/commit/f0939a8d7b0d8408b904e50e8d618cb555da225b))
+
 ## [0.1.14](https://github.com/V-ed/prisma-fixtures/compare/prisma-fixtures-v0.1.13...prisma-fixtures-v0.1.14) (2023-04-19)
 
 
