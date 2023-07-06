@@ -25,8 +25,8 @@ devDependencies:
     specifier: 0.1.6
     version: 0.1.6(eslint@8.43.0)(typescript@5.1.6)
   '@v-ed/prettier-config':
-    specifier: 0.2.1
-    version: 0.2.1(prettier@2.8.8)(svelte@3.59.1)
+    specifier: 0.3.0
+    version: 0.3.0(svelte@3.59.1)
   '@v-ed/tsconfig':
     specifier: 0.3.0
     version: 0.3.0(typescript@5.1.6)
@@ -760,15 +760,13 @@ packages:
       - supports-color
     dev: true
 
-  /@v-ed/prettier-config@0.2.1(prettier@2.8.8)(svelte@3.59.1):
-    resolution: {integrity: sha512-yQe6bMTxLmmWlMpJt+iXVNLCplva7PeH4dYAtaGP50Z6xx7xE6txIOCItOnJZBen5EHnSLWFN0M+h8twzufHZA==}
+  /@v-ed/prettier-config@0.3.0(svelte@3.59.1):
+    resolution: {integrity: sha512-VfsLHX8yGs++1uDlb74wEl3U7tzmV5BVxEaI2IE880219bcWC8tgYcyXrqaL+zkITpgB6nHHmapypvYe5JiXUA==}
     engines: {node: '>=14'}
     peerDependencies:
-      prettier: ^2
-    dependencies:
-      prettier: 2.8.8
+      prettier: ^3
     optionalDependencies:
-      prettier-plugin-svelte: 2.10.1(prettier@2.8.8)(svelte@3.59.1)
+      prettier-plugin-svelte: 2.10.1(svelte@3.59.1)
     transitivePeerDependencies:
       - svelte
     dev: true
@@ -2378,23 +2376,16 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte@2.10.1(prettier@2.8.8)(svelte@3.59.1):
+  /prettier-plugin-svelte@2.10.1(svelte@3.59.1):
     resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
     requiresBuild: true
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0
     dependencies:
-      prettier: 2.8.8
       svelte: 3.59.1
     dev: true
     optional: true
-
-  /prettier@2.8.8:
-    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dev: true
 
   /pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
