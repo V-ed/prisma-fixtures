@@ -23,13 +23,13 @@ devDependencies:
     version: 18.15.11
   '@v-ed/eslint-config':
     specifier: 0.2.3
-    version: 0.2.3(@eslint/js@9.18.0)(eslint@9.19.0)(typescript-eslint@8.18.2)(typescript@5.5.4)
+    version: 0.2.3(@eslint/js@9.19.0)(eslint@9.19.0)(typescript-eslint@8.18.2)(typescript@5.5.4)
   '@v-ed/prettier-config':
     specifier: 0.3.0
     version: 0.3.0(svelte@3.59.1)
   '@v-ed/tsconfig':
-    specifier: 0.3.0
-    version: 0.3.0(typescript@5.5.4)
+    specifier: 0.4.0
+    version: 0.4.0(typescript@5.5.4)
   '@vitest/coverage-v8':
     specifier: 3.0.4
     version: 3.0.4(vitest@3.0.4)
@@ -562,11 +562,6 @@ packages:
       - supports-color
     dev: true
 
-  /@eslint/js@9.18.0:
-    resolution: {integrity: sha512-fK6L7rxcq6/z+AaQMtiFTkvbHkBLNlwyRxHpKawP0x3u9+NC6MQTnFW+AdpwC6gfHTW0051cokQgtTN2FqlxQA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    dev: true
-
   /@eslint/js@9.19.0:
     resolution: {integrity: sha512-rbq9/g38qjfqFLOVPvwjIvFFdNziEC5S65jmjPw5r6A//QH+W91akh9irMwjDN8zKUTak6W9EsAv4m/7Wnw0UQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -974,7 +969,7 @@ packages:
       eslint-visitor-keys: 4.2.0
     dev: true
 
-  /@v-ed/eslint-config@0.2.3(@eslint/js@9.18.0)(eslint@9.19.0)(typescript-eslint@8.18.2)(typescript@5.5.4):
+  /@v-ed/eslint-config@0.2.3(@eslint/js@9.19.0)(eslint@9.19.0)(typescript-eslint@8.18.2)(typescript@5.5.4):
     resolution: {integrity: sha512-mmICie5kyYat5KhohUemQXLpAsTxe9lal8dozGHsEk2Snfge88u179AZoD1GdwBNwqFfbJBqOVtsd+m8fs5dww==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -983,7 +978,7 @@ packages:
       typescript: '*'
       typescript-eslint: '>=8'
     dependencies:
-      '@eslint/js': 9.18.0
+      '@eslint/js': 9.19.0
       eslint: 9.19.0
       typescript: 5.5.4
       typescript-eslint: 8.18.2(eslint@9.19.0)(typescript@5.5.4)
@@ -1000,9 +995,9 @@ packages:
       - svelte
     dev: true
 
-  /@v-ed/tsconfig@0.3.0(typescript@5.5.4):
-    resolution: {integrity: sha512-dA/dTM0CqYQyvAoRVzmgBhQeO1QfCcUjmQqcU5Oza0a30ICmfAZuMj9+MCgcevnXFKLT5+Ag21Ny1UY3G4Cr8A==}
-    engines: {node: '>=14'}
+  /@v-ed/tsconfig@0.4.0(typescript@5.5.4):
+    resolution: {integrity: sha512-+CFpiujVjBVKSeLc9viXtnzgDEGiVU3rFcFKw6JkOKs+iipMduNgesqH6Daaer4H9NrYaOAkUnYoaJ/iOfi5+g==}
+    engines: {node: '>=16'}
     peerDependencies:
       typescript: ^5
     dependencies:
