@@ -23,7 +23,7 @@ devDependencies:
     version: 18.15.11
   '@v-ed/eslint-config':
     specifier: 0.2.3
-    version: 0.2.3(@eslint/js@9.26.0)(eslint@9.27.0)(typescript-eslint@8.18.2)(typescript@5.5.4)
+    version: 0.2.3(@eslint/js@9.27.0)(eslint@9.27.0)(typescript-eslint@8.18.2)(typescript@5.5.4)
   '@v-ed/prettier-config':
     specifier: 0.3.0
     version: 0.3.0(svelte@3.59.1)
@@ -37,8 +37,8 @@ devDependencies:
     specifier: 9.27.0
     version: 9.27.0
   npm-run-all2:
-    specifier: 8.0.2
-    version: 8.0.2
+    specifier: 8.0.4
+    version: 8.0.4
   tsup:
     specifier: 8.4.0
     version: 8.4.0(typescript@5.5.4)
@@ -576,11 +576,6 @@ packages:
       - supports-color
     dev: true
 
-  /@eslint/js@9.26.0:
-    resolution: {integrity: sha512-I9XlJawFdSMvWjDt6wksMCrgns5ggLNfFwFvnShsleWruvXM514Qxk8V246efTw+eo9JABvVz+u3q2RiAowKxQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    dev: true
-
   /@eslint/js@9.27.0:
     resolution: {integrity: sha512-G5JD9Tu5HJEu4z2Uo4aHY2sLV64B7CDMXxFzqzjl3NKd6RVzSXNoE80jk7Y0lJkTTkjiIhBAqmlYwjuBY3tvpA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -996,7 +991,7 @@ packages:
       eslint-visitor-keys: 4.2.0
     dev: true
 
-  /@v-ed/eslint-config@0.2.3(@eslint/js@9.26.0)(eslint@9.27.0)(typescript-eslint@8.18.2)(typescript@5.5.4):
+  /@v-ed/eslint-config@0.2.3(@eslint/js@9.27.0)(eslint@9.27.0)(typescript-eslint@8.18.2)(typescript@5.5.4):
     resolution: {integrity: sha512-mmICie5kyYat5KhohUemQXLpAsTxe9lal8dozGHsEk2Snfge88u179AZoD1GdwBNwqFfbJBqOVtsd+m8fs5dww==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -1005,7 +1000,7 @@ packages:
       typescript: '*'
       typescript-eslint: '>=8'
     dependencies:
-      '@eslint/js': 9.26.0
+      '@eslint/js': 9.27.0
       eslint: 9.27.0
       typescript: 5.5.4
       typescript-eslint: 8.18.2(eslint@9.27.0)(typescript@5.5.4)
@@ -1931,8 +1926,8 @@ packages:
     engines: {node: ^18.17.0 || >=20.5.0}
     dev: true
 
-  /npm-run-all2@8.0.2:
-    resolution: {integrity: sha512-yU70kTcohhAETxUjJQxTdQbaDJWCyv+DlKHEWdOifxZ0hZUKRh26mY2mfzlPxfGbsTRbgBuEHeakB6wx0CvVaQ==}
+  /npm-run-all2@8.0.4:
+    resolution: {integrity: sha512-wdbB5My48XKp2ZfJUlhnLVihzeuA1hgBnqB2J9ahV77wLS+/YAJAlN8I+X3DIFIPZ3m5L7nplmlbhNiFDmXRDA==}
     engines: {node: ^20.5.0 || >=22.0.0, npm: '>= 10'}
     hasBin: true
     dependencies:
