@@ -25,8 +25,8 @@ devDependencies:
     specifier: 0.2.6
     version: 0.2.6(@eslint/js@9.36.0)(eslint@9.36.0)(typescript-eslint@8.18.2)(typescript@5.5.4)
   '@v-ed/prettier-config':
-    specifier: 0.3.0
-    version: 0.3.0(svelte@3.59.1)
+    specifier: 0.3.1
+    version: 0.3.1(prettier@3.6.2)(svelte@3.59.1)
   '@v-ed/tsconfig':
     specifier: 0.3.0
     version: 0.3.0(typescript@5.5.4)
@@ -1016,13 +1016,15 @@ packages:
       typescript-eslint: 8.18.2(eslint@9.36.0)(typescript@5.5.4)
     dev: true
 
-  /@v-ed/prettier-config@0.3.0(svelte@3.59.1):
-    resolution: {integrity: sha512-VfsLHX8yGs++1uDlb74wEl3U7tzmV5BVxEaI2IE880219bcWC8tgYcyXrqaL+zkITpgB6nHHmapypvYe5JiXUA==}
+  /@v-ed/prettier-config@0.3.1(prettier@3.6.2)(svelte@3.59.1):
+    resolution: {integrity: sha512-hDACiJqIhhvmX2Ob2WHDyx3xr3hoIhP6txk0IEZDPkmVlbEJh6UyZGG7KpwKKPSRHyOa63UzAu4Lghybl6/y3Q==}
     engines: {node: '>=14'}
     peerDependencies:
       prettier: ^3
+    dependencies:
+      prettier: 3.6.2
     optionalDependencies:
-      prettier-plugin-svelte: 2.10.1(svelte@3.59.1)
+      prettier-plugin-svelte: 3.4.0(prettier@3.6.2)(svelte@3.59.1)
     transitivePeerDependencies:
       - svelte
     dev: true
@@ -2181,16 +2183,23 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte@2.10.1(svelte@3.59.1):
-    resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
+  /prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@3.59.1):
+    resolution: {integrity: sha512-pn1ra/0mPObzqoIQn/vUTR3ZZI6UuZ0sHqMK5x2jMLGrs53h0sXhkVuDcrlssHwIMk7FYrMjHBPoUSyyEEDlBQ==}
     requiresBuild: true
     peerDependencies:
-      prettier: ^1.16.4 || ^2.0.0
-      svelte: ^3.2.0 || ^4.0.0-next.0
+      prettier: ^3.0.0
+      svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
     dependencies:
+      prettier: 3.6.2
       svelte: 3.59.1
     dev: true
     optional: true
+
+  /prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
