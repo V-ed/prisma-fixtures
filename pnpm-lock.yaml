@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.2.6
     version: 0.2.6
   dependency-graph:
-    specifier: ^0.11.0
-    version: 0.11.0
+    specifier: ^1.0.0
+    version: 1.0.0
 
 optionalDependencies:
   '@prisma/client':
@@ -23,7 +23,7 @@ devDependencies:
     version: 18.15.11
   '@v-ed/eslint-config':
     specifier: 0.2.6
-    version: 0.2.6(@eslint/js@9.38.0)(eslint@9.39.1)(typescript-eslint@8.18.2)(typescript@5.5.4)
+    version: 0.2.6(@eslint/js@9.39.1)(eslint@9.39.1)(typescript-eslint@8.18.2)(typescript@5.5.4)
   '@v-ed/prettier-config':
     specifier: 0.3.1
     version: 0.3.1(prettier@3.6.2)(svelte@3.59.1)
@@ -587,11 +587,6 @@ packages:
       - supports-color
     dev: true
 
-  /@eslint/js@9.38.0:
-    resolution: {integrity: sha512-UZ1VpFvXf9J06YG9xQBdnzU+kthors6KjhMAl6f4gH4usHyh31rUf2DLGInT8RFYIReYXNSydgPY0V2LuWgl7A==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    dev: true
-
   /@eslint/js@9.39.1:
     resolution: {integrity: sha512-S26Stp4zCy88tH94QbBv3XCuzRQiZ9yXofEILmglYTh/Ug/a9/umqvgFtYBAo3Lp0nsI/5/qH1CCrbdK3AP1Tw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1017,7 +1012,7 @@ packages:
       eslint-visitor-keys: 4.2.1
     dev: true
 
-  /@v-ed/eslint-config@0.2.6(@eslint/js@9.38.0)(eslint@9.39.1)(typescript-eslint@8.18.2)(typescript@5.5.4):
+  /@v-ed/eslint-config@0.2.6(@eslint/js@9.39.1)(eslint@9.39.1)(typescript-eslint@8.18.2)(typescript@5.5.4):
     resolution: {integrity: sha512-gI1ahB/9dnBFWLw/qzJT0tU2Kc9qgFaGQpj52T7z9QNWVY7Xb5j4K3OoDe4zYhWMe3J5cemH3NtdnQChIbn/iw==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -1026,7 +1021,7 @@ packages:
       typescript: ^5 || ^6
       typescript-eslint: ^8
     dependencies:
-      '@eslint/js': 9.38.0
+      '@eslint/js': 9.39.1
       eslint: 9.39.1
       typescript: 5.5.4
       typescript-eslint: 8.18.2(eslint@9.39.1)(typescript@5.5.4)
@@ -1359,9 +1354,9 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
-  /dependency-graph@0.11.0:
-    resolution: {integrity: sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==}
-    engines: {node: '>= 0.6.0'}
+  /dependency-graph@1.0.0:
+    resolution: {integrity: sha512-cW3gggJ28HZ/LExwxP2B++aiKxhJXMSIt9K48FOXQkm+vuG5gyatXnLsONRJdzO/7VfjDIiaOOa/bs4l464Lwg==}
+    engines: {node: '>=4'}
     dev: false
 
   /eastasianwidth@0.2.0:
