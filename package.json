@@ -68,7 +68,7 @@
     "eslint": "9.39.1",
     "npm-run-all2": "8.0.4",
     "tsup": "8.5.1",
-    "typescript": "5.5.4",
+    "typescript": "5.9.3",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
   },
