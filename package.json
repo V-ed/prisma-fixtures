@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "class-importer": "^0.2.6",
-    "dependency-graph": "^0.11.0"
+    "dependency-graph": "^1.0.0"
   },
   "optionalDependencies": {
     "@prisma/client": ">= 2"
